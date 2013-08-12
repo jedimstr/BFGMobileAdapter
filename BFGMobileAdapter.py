@@ -2,7 +2,7 @@
 #
 # Originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMinerRPC Portion of the script
 #
-# BFGMobileAdapter version 1.0.1
+# BFGMobileAdapter version 1.0.2
 #
 # Copyright 2013 Philip De Leon
 #
@@ -22,7 +22,7 @@ import socket
 import urllib
 import urllib2
 
-print '[ -=-=-=-=- Starting BFGMiner to MobileMiner Interface -=-=-=-=- ]'
+print '[ -=-=-=-=- Starting BFGMobileAdapter - BFGMiner to MobileMiner Interface -=-=-=-=- ]'
 while 1:
 	logging.basicConfig(
 			 format='%(asctime)s %(levelname)s %(message)s',
@@ -62,7 +62,7 @@ while 1:
 
 	data = []
 	data2 = []
-	print '[ Getting Data from BFGMiner RPC API: '+str(datetime.datetime.now()).split('.')[0]+' ]'
+	print '['+str(datetime.datetime.now()).split('.')[0]+']  Getting Data from BFGMiner RPC API using port:'+str(args.port)
 	try:
 		data = s.recv(32768)
 	except socket.error, e:
@@ -125,7 +125,7 @@ while 1:
 		import traceback
 		logging.warning('Generic Exception: ' + traceback.format_exc())
 		
-	print '[ Sending to MobileMiner API from '+machineName+': '+str(datetime.datetime.now()).split('.')[0]+' ]'  
+	print '['+str(datetime.datetime.now()).split('.')[0]+']  Sending to MobileMiner API from '+machineName  
 	time.sleep(30)
 
 	
