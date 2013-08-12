@@ -22,7 +22,7 @@ import urllib2
 
 print '[ -=-=-=-=- Starting BFGMiner to MobileMiner Interface -=-=-=-=- ]'
 while 1:
-  logging.basicConfig(
+	logging.basicConfig(
 			 format='%(asctime)s %(levelname)s %(message)s',
 			 level=logging.DEBUG
 	)
@@ -31,10 +31,10 @@ while 1:
 # --- Begin Miner Configuration ---
 	emailAddy = 'yourEmail@email.com'
 	applicationKey = 'ApplicationKey'
-	apiKey = 'API Key'
 	machineName = 'Miner Machine Name'
 # --- End Miner Configuration  ---
 	
+	apiKey = 'yIiEyL50VuMVdp'
 	reqURL = 'https://api.mobileminerapp.com/MiningStatisticsInput?emailAddress='+emailAddy+'&applicationKey='+applicationKey+'&machineName='+machineName+'&apiKey='+apiKey
 
 	parser = argparse.ArgumentParser()
@@ -114,3 +114,5 @@ while 1:
 	response = urllib2.urlopen(req, json.dumps(data2))
 	print '[ Sending to MobileMiner API from '+machineName+': '+str(datetime.datetime.now()).split('.')[0]+' ]'  
 	time.sleep(30)
+
+	
