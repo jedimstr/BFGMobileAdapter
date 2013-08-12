@@ -98,7 +98,7 @@ while 1:
 		else:
 			device[u'Enabled'] = False
 		if u'Temperature' in item:
-			device[u'Temperature'] = [u'Temperature']
+			device[u'Temperature'] = item[u'Temperature']
 		device[u'Status'] = item[u'Status']
 		device[u'AverageHashrate'] = item[u'MHS av'] * 1000
 		device[u'CurrentHashrate'] = item[u'MHS 5s'] * 1000
