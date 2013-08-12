@@ -13,3 +13,5 @@ It is currently set for a time-interval of 30 seconds between POSTs to the API. 
 Thanks to <a href="http://www.nwoolls.com/">Nate Woolls</a> - author of MultiMiner and the MobileMiner Apps for IOS and soon Android & Windows Mobile
 
 Parts are originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMiner RPC Portion of the script.
+
+<a href="https://github.com/jedimstr/BFGMobileAdapter/wiki/Release-Notes"><b>Release Notes available here.</b></a> 
