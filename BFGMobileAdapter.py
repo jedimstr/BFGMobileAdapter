@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# Originally derived from Christian Berendt's api-example.py for BFGMiner for the BFG RPC Portion of the script
+# Originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMiner RPC Portion of the script
 #
 # Copyright 2013 Philip De Leon
 #
