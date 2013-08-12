@@ -1,9 +1,5 @@
 BFGMobile
 =========
-Originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMiner RPC Portion of the script
-
-Copyright 2013 Philip De Leon
-
 
 Description:  
 This is a simple Python Script to take data from the BFGMiner RPC and send it to the MobileMiner Apps' REST API.
@@ -14,3 +10,5 @@ It is currently set for a time-interval of 30 seconds between POSTs to the API. 
 
 
 Thanks to <a href="http://www.nwoolls.com/">Nate Woolls</a> - author of MultiMiner and the MobileMiner Apps for IOS and soon Android & Windows Mobile
+
+Parts are originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMiner RPC Portion of the script.
