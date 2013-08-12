@@ -33,8 +33,8 @@ while 1:
 	applicationKey = 'ApplicationKey'
 	machineName = 'Miner Machine Name'
 # --- End Miner Configuration  ---
-	
-	apiKey = 'yIiEyL50VuMVdp'
+
+	apiKey = 'yIiEyL50VuMVdp'	
 	reqURL = 'https://api.mobileminerapp.com/MiningStatisticsInput?emailAddress='+emailAddy+'&applicationKey='+applicationKey+'&machineName='+machineName+'&apiKey='+apiKey
 
 	parser = argparse.ArgumentParser()
@@ -60,7 +60,7 @@ while 1:
 
 	data = []
 	data2 = []
-
+	print '[ Getting Data from BFGMiner RPC API: '+str(datetime.datetime.now()).split('.')[0]+' ]'
 	try:
 		data = s.recv(32768)
 	except socket.error, e:
@@ -110,8 +110,19 @@ while 1:
 
 	req = urllib2.Request(reqURL)
 	req.add_header('Content-Type', 'application/json')
-
-	response = urllib2.urlopen(req, json.dumps(data2))
+	
+	try: 
+		response = urllib2.urlopen(req, json.dumps(data2))
+	except urllib2.HTTPError, e:
+		logging.warning('HTTPError = ' + str(e.code))
+	except urllib2.URLError, e:
+		logging.warning('URLError = ' + str(e.reason))
+	except httplib.HTTPException, e:
+		logging.warning('HTTPException')
+	except Exception:
+		import traceback
+		logging.warning('Generic Exception: ' + traceback.format_exc())
+		
 	print '[ Sending to MobileMiner API from '+machineName+': '+str(datetime.datetime.now()).split('.')[0]+' ]'  
 	time.sleep(30)
 
