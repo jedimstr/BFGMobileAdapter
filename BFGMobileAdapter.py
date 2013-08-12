@@ -2,6 +2,8 @@
 #
 # Originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMinerRPC Portion of the script
 #
+# BFGMobileAdapter version 1.0.1
+#
 # Copyright 2013 Philip De Leon
 #
 # This program is free software; you can redistribute it and/or modify it under
