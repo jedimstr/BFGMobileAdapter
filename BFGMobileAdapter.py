@@ -78,7 +78,7 @@ while 1:
 
 	for item in data['DEVS']:
 		device = dict()
-		device[u'MinerName'] = machineName
+		device[u'MinerName'] = u'BFGMobileAdapter'
 		device[u'CoinSymbol'] = u'BTC'
 		device[u'CoinName'] = u'Bitcoin'
 		device[u'Algorithm'] = u'SHA-256'
