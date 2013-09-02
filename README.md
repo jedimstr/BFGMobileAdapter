@@ -2,8 +2,9 @@ BFGMobileAdapter
 =========
 
 
-This is a simple Python Script to take data from the BFGMiner RPC and send it to the MobileMiner Apps' REST API.
+UPDATE - apparently this script also works with CGMiner due to their shared implementation of RPC. I may have to rename this thing. 
 
+This is a simple Python Script to take data from the BFGMiner and/or CGMiner RPC and send it to the MobileMiner Apps' REST API.
 For more info on the MobileMiner suite of Monitoring and Control Apps, check out http://www.mobileminerapp.com/
 
 Right now this script only posts data to the API for monitoring and does not allow for remote Miner control.
