@@ -11,8 +11,9 @@ Right now this script only posts data to the API for monitoring and does not all
 It is currently set for a time-interval of 30 seconds between POSTs to the API.  This is configurable from within the script.
 
 
-Thanks to <a href="http://www.nwoolls.com/">Nate Woolls</a> - author of MultiMiner and the MobileMiner Apps for IOS and soon Android & Windows Mobile
+Thanks to <a href="http://www.nwoolls.com/">Nate Woolls</a> - author of MultiMiner and the MobileMiner Apps for IOS and Android, & soon Windows Mobile
 
 Parts are originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMiner RPC Portion of the script.
 
 <a href="https://github.com/jedimstr/BFGMobileAdapter/wiki/Release-Notes"><b>Release Notes available here.</b></a> 
+
