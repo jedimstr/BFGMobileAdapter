@@ -1,8 +1,9 @@
 #!/usr/bin/python
 #
 # Originally derived from Christian Berendt's api-example.py for BFGMiner for the BFGMinerRPC Portion of the script
+# Script was made to run with Python 2.x.  It may need to be substantially modified to work with Python 3.x.
 #
-# BFGMobileAdapter version 1.0.3
+# BFGMobileAdapter version 1.0.4
 #
 # Copyright 2013 Philip De Leon
 #
@@ -37,7 +38,7 @@ while 1:
 # --- End Miner Configuration  ---
 
 	apiKey = 'yIiEyL50VuMVdp'	
-	reqURL = 'https://api.mobileminerapp.com/MiningStatisticsInput?emailAddress='+emailAddy+'&applicationKey='+applicationKey+'&machineName='+machineName+'&apiKey='+apiKey
+	reqURL = 'https://mobileminer.azurewebsites.net/api/MiningStatisticsInput?emailAddress='+emailAddy+'&applicationKey='+applicationKey+'&machineName='+machineName+'&apiKey='+apiKey
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("command", default="devs", nargs='?')
