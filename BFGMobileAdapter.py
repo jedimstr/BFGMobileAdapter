@@ -83,19 +83,32 @@ while 1:
 		device[u'CoinSymbol'] = u'BTC'
 		device[u'CoinName'] = u'Bitcoin'
 		device[u'Algorithm'] = u'SHA-256'
-		if item[u'Name'] == u'OCL':
-			device[u'Kind'] =  item[u'Name']
-			device[u'FanSpeed'] = item[u'Fan Speed']
-			device[u'FanPercent'] = item[u'Fan Percent']
-			device[u'GpuClock'] = item[u'GPU Clock']
-			device[u'MemoryClock'] = item[u'Memory Clock']
-			device[u'GpuVoltage'] = item[u'GPU Voltage']
-			device[u'GpuActivity'] = item[u'GPU Activity']
-			device[u'PowerTune'] = item[u'Powertune']
-			device[u'Intensity'] = item[u'Intensity']
+		if not item.get('Name'):
+				device[u'Kind'] = u'GPU'
+				device[u'FanSpeed'] = item[u'Fan Speed']
+				device[u'FanPercent'] = item[u'Fan Percent']
+				device[u'GpuClock'] = item[u'GPU Clock']
+				device[u'MemoryClock'] = item[u'Memory Clock']
+				device[u'GpuVoltage'] = item[u'GPU Voltage']
+				device[u'GpuActivity'] = item[u'GPU Activity']
+				device[u'PowerTune'] = item[u'Powertune']
+				device[u'Intensity'] = item[u'Intensity']
+		elif item[u'Name'] == u'OCL':
+				device[u'Kind'] =  item[u'Name']
+				device[u'FanSpeed'] = item[u'Fan Speed']
+				device[u'FanPercent'] = item[u'Fan Percent']
+				device[u'GpuClock'] = item[u'GPU Clock']
+				device[u'MemoryClock'] = item[u'Memory Clock']
+				device[u'GpuVoltage'] = item[u'GPU Voltage']
+				device[u'GpuActivity'] = item[u'GPU Activity']
+				device[u'PowerTune'] = item[u'Powertune']
+				device[u'Intensity'] = item[u'Intensity']
 		else:
-			device[u'Kind'] = item[u'Name']
-		device[u'Index'] = item[u'ID']
+				device[u'Kind'] = item[u'Name']
+		if not item.get('Name'):
+				device[u'Index'] = item[u'GPU']
+		else:
+				device[u'Index'] = item[u'ID']
 		if item[u'Enabled'] == u'Y':
 			device[u'Enabled'] = True
 		else:
